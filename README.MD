@@ -1,5 +1,10 @@
 # **Chotu Robo Server - MCP Server for Arduino **
 
+<div align="center">
+  <img src="choturobo.jpg" alt="Chotu Robo" width="200" height="200">
+</div>
+
+
 ## Overview
 
 This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
