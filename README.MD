@@ -1,4 +1,4 @@
-# **Chotu Robo Server - Integration of Arduino and AI with MCP Framework**
+# **Chotu Robo Server - MCP Server for Arduino **
 
 ## Overview
 
