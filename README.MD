@@ -1,0 +1,135 @@
+# **Chotu Robo Server - Integration of Arduino and AI with MCP Framework**
+
+## Overview
+
+This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
+
+This system acts as a **robotic server** (named **Chotu Robo**) that can interact with various physical components like LEDs, motors, servos, fans, sensors, and more. These components can be controlled remotely by sending commands to the server, which in turn controls the hardware via the ESP32 or Arduino Nano 368 microcontroller.
+
+This setup opens up the possibility for future AI-based applications, such as controlling the robot through AI assistants (like Claude) from mobile or web applications.
+
+## Features
+
+1. **LED Control**: Blink an LED for a given duration.
+2. **Buzzer Control**: Sound a buzzer for a specified time.
+3. **Motor Control**: Run a motor at a certain speed for a set time.
+4. **Servo Control**: Move a servo motor to a specific angle.
+5. **Fan Control**: Turn a fan on/off.
+6. **Relay Control**: Switch a relay on or off.
+7. **Sensor Readings**:
+    - Read **temperature** from a sensor.
+    - Measure **distance** using an ultrasonic sensor.
+8. **AI-powered Commands**: Control the robot using AI-based prompts for actions like moving, starting, stopping, turning, and adjusting speed.
+
+## Components Used
+
+- **NodeMCU ESP32** or **Arduino Nano 368**: Microcontrollers responsible for controlling the hardware and communicating with the server.
+- **Johnny-Five**: The JavaScript robotics and IoT library to interact with the hardware components.
+- **MCP Framework**: The Model Context Protocol framework to handle requests and interactions with external systems, enabling AI-based communication.
+- **Sensors & Actuators**:
+    - **LED** (for indicating status)
+    - **Buzzer**
+    - **Servo Motor**
+    - **Motor**
+    - **Relay Module**
+    - **Ultrasonic Distance Sensor**
+    - **Temperature Sensor**
+
+## How It Works
+
+The **Chotu Robo Server** acts as the main hub for handling commands from an AI system. The following flow outlines how the system works:
+
+1. **Setup**:
+    - The **NodeMCU ESP32** or **Arduino Nano 368** board is connected to various sensors and actuators (LEDs, motors, etc.).
+    - The **Johnny-Five** library allows the server to control hardware components through the microcontroller.
+
+2. **MCP Integration**:
+    - The **McpServer** manages communication between the hardware and AI.
+    - The server provides several **tools** (commands) such as `blinkLED`, `buzz`, `runMotor`, `moveServo`, and more.
+    - Each tool is associated with a specific function, and the server waits for commands from the AI system to execute those actions.
+
+3. **AI Control**:
+    - **AI Prompts** are used to trigger actions like moving the robot (`move-chotu`), controlling speed (`set-chotu-speed`), and turning the robot (`turn-chotu`).
+    - The AI uses **Claude** or other AI assistants to send commands to the server. The server processes these commands and interacts with the hardware accordingly.
+
+4. **Real-Time Communication**:
+    - **StdioServerTransport** ensures the server can connect to external AI systems and execute commands in real-time.
+
+5. **User Commands**:
+    - The AI can send user-friendly commands like **"turn Chotu left"** or **"set speed to 5"** to control the robot's behavior.
+
+## Commands and Tools
+
+Here are some of the available commands and their functionalities:
+
+- **`blinkLED`**: Blink the LED for a specified time.
+- **`buzz`**: Activate the buzzer for a certain duration.
+- **`runMotor`**: Start the motor at a given speed for a set period.
+- **`moveServo`**: Move the servo motor to a specified angle.
+- **`controlFan`**: Turn the fan on or off.
+- **`toggleRelay`**: Switch a relay module on or off.
+- **`readTemperature`**: Get the current temperature reading.
+- **`readDistance`**: Measure the distance using the ultrasonic sensor.
+- **`move-chotu`**: Move Chotu in specific steps (via AI prompt).
+- **`start-chotu`**: Start Chotu and get ready to operate.
+- **`stop-chotu`**: Stop Chotu and shut down operations.
+- **`turn-chotu`**: Turn Chotu to a specified direction (left or right).
+- **`set-chotu-speed`**: Set the speed for Chotu.
+
+## How to Use
+
+### Requirements
+
+1. **Hardware**:
+    - **NodeMCU ESP32** or **Arduino Nano 368** (or any supported Arduino/ESP32 board).
+    - Various sensors and actuators (LED, servo, motor, ultrasonic sensor, temperature sensor, relay).
+
+2. **Software**:
+    - Install **Node.js**.
+    - Install **Johnny-Five** for hardware control.
+    - Use the **MCP SDK** to integrate with AI.
+    - Use the **Arduino IDE** to program the microcontroller.
+
+### Steps to Setup
+
+1. Install **Node.js** and **Johnny-Five**:
+   ```bash
+   npm install johnny-five
+   npm install @modelcontextprotocol/sdk
+   Set up the ESP32 or Arduino Nano 368 on the Arduino IDE:
+
+   Install the ESP32 board support in the Arduino IDE for ESP32 or Arduino Nano 368 board if using.
+   Connect the NodeMCU ESP32 or Arduino Nano 368 to your computer via USB.
+   Upload the Code to the Board:
+        
+   Use the Arduino IDE to upload the provided code to the ESP32 or Arduino Nano 368.
+   ```
+   Run the Server:
+        
+        Start the MCP server by running the script. This will set up the server and establish communication with the hardware.
+        Connect to the AI:
+        
+        Send commands from the AI system (like Claude) to control the robot.
+Example AI Commands
+Move Chotu:
+
+Command: "Move Chotu forward by 5 steps."
+Action: The robot will move based on the specified number of steps.
+Set Speed:
+
+Command: "Set speed to 10."
+Action: The robot's speed will be adjusted accordingly.
+Turn Left:
+
+Command: "Turn Chotu left."
+Action: The robot will rotate left.
+
+### Debug using the MCP Inspector:
+```  npx @modelcontextprotocol/inspector node  build/choturobo.js ```
+
+## Future Improvements
+This project can serve as a foundational framework for developing more advanced AI-based robotic systems. You can extend the functionality by:
+
+Adding more sensors like cameras or microphones.
+Integrating advanced AI models for better decision-making.
+Developing a mobile app or web interface to control the robot via a graphical interface.
