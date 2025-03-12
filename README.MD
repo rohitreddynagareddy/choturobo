@@ -10,13 +10,14 @@ This setup opens up the possibility for future AI-based applications, such as co
 
 The Chotu Robot operates in two modes: Wired Mode and Wireless Mode, each designed for different use cases and hardware configurations.
 
-Wired Mode - Arduino Nano 368
+### Wired Mode - Arduino Nano 368
 In Wired Mode, the robot uses an Arduino Nano 368 board, where the code is uploaded directly via USB. This mode does not support real-time commands over the network as it requires a physical USB connection to operate. The robot runs its pre-uploaded code, making it suitable for projects where Wi-Fi or network connectivity is not required.
 
-Wireless Mode - ESP32 Wi-Fi Enabled Web Server
+### Wireless Mode - ESP32 Wi-Fi Enabled Web Server
 In Wireless Mode, the robot is powered by an ESP32 board. The ESP32 connects to your local Wi-Fi network and starts a Wi-Fi enabled web server that listens for real-time commands through REST API or WebSocket. This mode allows the robot to interact with external devices and control various hardware components like LEDs, motors, servos, and fans.
 
 Once the ESP32 is connected to Wi-Fi, it accepts incoming commands that control hardware functionality in real-time. These commands can be sent from a TypeScript MCP server or a Java Spring-based MCP server, allowing seamless integration between microcontroller hardware and AI-based systems for automation, robotics, or IoT applications.
+
 ## Features
 
 1. **LED Control**: Blink an LED for a given duration.
