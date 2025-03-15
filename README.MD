@@ -7,7 +7,7 @@
 
 ## Overview
 
-This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
+This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework from Claude AI by Anthropic. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
 
 This system acts as a **robotic server** (named **Chotu Robo**) that can interact with various physical components like LEDs, motors, servos, fans, sensors, and more. These components can be controlled remotely by sending commands to the server, which in turn controls the hardware via the ESP32 or Arduino Nano 368 microcontroller.
 
