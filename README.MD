@@ -144,7 +144,53 @@ Action: The robot will rotate left.
 
 ## Future Improvements
 This project can serve as a foundational framework for developing more advanced AI-based robotic systems. You can extend the functionality by:
+1. **Adding more sensors** like cameras or microphones.
+2. **Integrating advanced AI models** for better decision-making.
+3. **Developing a mobile app or web interface** to control the robot via a graphical interface.
+4. **Using a Raspberry Pi**:
+    - **Setup**: Use a Raspberry Pi to run the MCP server and control the hardware components.
+    - **Installation**:
+        ```bash
+        sudo apt-get update
+        sudo apt-get install nodejs npm
+        npm install johnny-five
+        npm install @modelcontextprotocol/sdk
+        ```
+    - **Connecting to Java-based Server**:
+        - **Java Server Setup**: Create a Java-based MCP server to handle requests and communicate with the Raspberry Pi.
+        - **Java Code Example**:
+            ```java
+            import org.modelcontextprotocol.server.McpServer;
+            import org.modelcontextprotocol.server.transport.WebSocketTransport;
 
-Adding more sensors like cameras or microphones.
-Integrating advanced AI models for better decision-making.
-Developing a mobile app or web interface to control the robot via a graphical interface.
+            public class ChotuRoboServer {
+                public static void main(String[] args) {
+                    McpServer server = new McpServer();
+                    WebSocketTransport transport = new WebSocketTransport("ws://raspberrypi.local:8080");
+                    server.connect(transport);
+
+                    // Define tools and prompts here
+                    server.tool("blinkLED", params -> {
+                        // Implement LED blinking logic
+                    });
+
+                    server.start();
+                }
+            }
+            ```
+        - **Running the Server**:
+            ```bash
+            javac -cp modelcontextprotocol-sdk.jar ChotuRoboServer.java
+            java -cp .:modelcontextprotocol-sdk.jar ChotuRoboServer
+            ```
+    - **Connecting Raspberry Pi to Java Server**:
+        - Ensure the Raspberry Pi and Java server are on the same network.
+        - Use WebSocket or REST API to send commands from the Java server to the Raspberry Pi.
+        - Example command from Java server to Raspberry Pi:
+            ```java
+            WebSocketClient client = new WebSocketClient(new URI("ws://raspberrypi.local:8080"));
+            client.connect();
+            client.send("{\"command\": \"blinkLED\", \"params\": {\"time\": 5}}");
+            ```
+
+By following these steps, you can enhance the Chotu Robo project with more advanced features and better integration with AI and Java-based systems.
