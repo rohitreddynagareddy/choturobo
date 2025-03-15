@@ -4,9 +4,9 @@
 #include <Motor.h>
 #include <Led.h>
 
-const char* ssid = "mywifi"; // 🔹 Replace with your Wi-Fi SSID
-const char* password = "mypass"; // 🔹 Replace with your Wi-Fi Password
-WebServer server(80);  // Web server on port 80
+const char* ssid = "mywifi"; //
+const char* password = "mypass"; //
+WebServer server(80);  //
 
 // Define pins
 const int ledPin = 13;    // LED Pin

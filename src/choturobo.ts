@@ -27,7 +27,7 @@ async function blinkLED<T>(time: number): Promise<T | null> {
         const led = new Led(10); // Create LED on pin 10
 
         // Blink the LED for the specified time
-         led.blink(time);
+         led.blink(time*1000);
 
         // Stop blinking after 5 seconds
         setTimeout(() => {
@@ -42,33 +42,47 @@ async function blinkLED<T>(time: number): Promise<T | null> {
     return ("done") as T;
 }
 
+async function buzz<T>(time: number): Promise<T | null> {
+
+    const board = new Board({
+        debug: false, //
+    });
+
+    board.on("ready", () => {
+        const buzzer = new Led(12);
+        if (board.isReady && buzzer) {
+            buzzer.on();
+            setTimeout(() => buzzer!.off(), time);
+        }
+    });
+
+    board.on("error", (error) => {
+        return "error on board"// Reject the Promise if there is an error
+    });
+    return ("done") as T;
+}
+
 server.tool(
-    "blinkLED",
+    "chotuBlinkEyes",
     { time: z.number() }, // ✅ Use `z.number()` instead of `z.bigint()`
     async ({ time }) => {
         const alertsData = await  blinkLED(time);  // Call the imported blinkLED function
           return {
-                content: [{type: "text", text: `I am blinking the LED for ${time}`}]
+                content: [{type: "text", text: `I am blinking the eyes of chotu for ${time}`}]
             };
 
     }
 );
 
 server.tool(
-    "buzz",
-    { time: z.number() },
+    "chotuBuzzSound",
+    { time: z.number() }, // ✅ Use `z.number()` instead of `z.bigint()`
     async ({ time }) => {
-        const board = new Board({
-            debug: false, //
-        });
-       const buzzer = new Led(9);
-        if (board.isReady && buzzer) {
-            buzzer.on();
-            setTimeout(() => buzzer!.off(), time);
-        }
+        const alertsData = await  buzz(time);  // Call the imported blinkLED function
         return {
-            content: [{ type: "text", text: `Buzzer will sound for ${time} milliseconds.` }]
+            content: [{type: "text", text: `I am buzzing the Chotu for ${time}`}]
         };
+
     }
 );
 
