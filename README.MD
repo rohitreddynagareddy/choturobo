@@ -5,6 +5,12 @@
 </div>
 
 
+## DEMO
+
+👉  [Chotu Robo Demo](https://www.linkedin.com/posts/vishalrow_claudeai-anthropic-ai-activity-7307097300147834880-Mi7n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABupTgBwY_78GTh-90OXNsbtOgGHbRO7HQ)
+
+👉  [Chotu Robo Article](https://www.linkedin.com/pulse/arduino-robot-controlled-artificial-intelligence-using-vishal-mysore-kwltc/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
+
 ## Overview
 
 This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework from Claude AI by Anthropic. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
