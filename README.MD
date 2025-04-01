@@ -7,7 +7,9 @@
 
 ## DEMO
 
-👉  [Chotu Robo Demo](https://www.linkedin.com/posts/vishalrow_claudeai-anthropic-ai-activity-7307097300147834880-Mi7n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABupTgBwY_78GTh-90OXNsbtOgGHbRO7HQ)
+👉 [Chotu Robo Demo 1](https://www.linkedin.com/posts/vishalrow_robotics-artificialintelligence-openai-activity-7312972405512028160-FfPB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABupTgBwY_78GTh-90OXNsbtOgGHbRO7HQ)
+
+👉  [Chotu Robo Demo 2](https://www.linkedin.com/posts/vishalrow_claudeai-anthropic-ai-activity-7307097300147834880-Mi7n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABupTgBwY_78GTh-90OXNsbtOgGHbRO7HQ)
 
 👉  [Chotu Robo Article](https://www.linkedin.com/pulse/arduino-robot-controlled-artificial-intelligence-using-vishal-mysore-kwltc/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
 
