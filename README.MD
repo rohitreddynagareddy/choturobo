@@ -1,7 +1,7 @@
 # **Chotu Robo Server - MCP Server for Arduino **
 
 <div align="center">
-  <img src="choturobo.jpg" alt="Chotu Robo" width="200" height="200">
+  <img src="Chotu.png" alt="Chotu Robo" width="300" height="300">
 </div>
 
 

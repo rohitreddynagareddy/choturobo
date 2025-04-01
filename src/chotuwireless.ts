@@ -15,7 +15,7 @@ server.tool(
     "moveBackward",
     { steps: z.number() }, // Takes the number of steps to move clockwise
     ({ steps }) => {
-        fetch("http://{ip}/clockwise", {
+        fetch("http://192.168.2.116/clockwise", {
             method: "GET",
         }).then((response) => response.json())  // Process the API response if needed
             .catch((error) => {
@@ -32,7 +32,7 @@ server.tool(
     "moveForward",
     { steps: z.number() }, // Takes the number of steps to move counterclockwise
     ({ steps }) => {
-        fetch("http://{ip}/counterclockwise", {
+        fetch("http://192.168.2.116/counterclockwise", {
             method: "GET",
         }).then((response) => response.json())  // Process the API response if needed
             .catch((error) => {
@@ -71,7 +71,7 @@ server.tool(
     { message: z.string() }, // Takes a string message to be spoken
     ({ message }) => {
         const encodedMessage = encodeURIComponent(message); // Encode the message for URL safety
-        const url = `http://localhost:8080/singASong?textToPlay=${encodedMessage}`;
+        const url = `http://localhost:8080/singASong?actor=${encodedMessage}`;
 
         fetch(url, {
             method: "GET",
