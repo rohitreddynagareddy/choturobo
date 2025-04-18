@@ -19,6 +19,10 @@
 
 👉  [Chotu Robo Article 2](https://www.linkedin.com/pulse/choturobo-mapletruck-step-guide-building-ai-powered-vishal-mysore-elvzc/?trackingId=0oj6GKrfS5eZu%2B9OYuIb3w%3D%3D)  
 
+
+<div align="center">
+  <img src="mapleTruck.jpg" alt="Chotu Robo" width="300" height="300">
+</div>
 ## Overview 
  
 This project showcases how to integrate Arduino-based robotics (using the **NodeMCU ESP32** or **Arduino Nano 368** board) with **AI** using the **MCP (Model Context Protocol)** framework from Claude AI by Anthropic. It provides a seamless connection between hardware components and AI through a simple interface that can be controlled by a user via a mobile phone or computer.
