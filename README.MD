@@ -13,7 +13,11 @@
 
 👉  [Chotu Robo Demo 3](https://www.linkedin.com/posts/vishalrow_autonomousrobot-springboot-artificialintelligence-activity-7316839291148554240-jFyM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAABupTgBwY_78GTh-90OXNsbtOgGHbRO7HQ)
 
+👉  [Chotu Robo Demo 4](https://www.linkedin.com/feed/update/urn:li:activity:7319065900031098880/)  
+
 👉  [Chotu Robo Article](https://www.linkedin.com/pulse/arduino-robot-controlled-artificial-intelligence-using-vishal-mysore-kwltc/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
+
+👉  [Chotu Robo Article 2](https://www.linkedin.com/pulse/choturobo-mapletruck-step-guide-building-ai-powered-vishal-mysore-elvzc/?trackingId=0oj6GKrfS5eZu%2B9OYuIb3w%3D%3D)  
 
 ## Overview
 
